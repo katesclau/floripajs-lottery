@@ -71,9 +71,12 @@ const Child = ({ match }) => (
   <div>
     { 
       match.params.id === "success" ? (
-        <p>
-          Thank you! Please access <a href="https://calendly.com/x-team-community/ben-60-min" style={{ color: "white" }}>https://calendly.com/x-team-community/ben-60-min</a> to schedule a talk with Ben <span role="img" aria-label="love">😎</span>.
-        </p>
+        <div>
+          <p>
+            Thank you! Please access <a href="https://calendly.com/x-team-community/ben-60-min" style={{ color: "white" }}>https://calendly.com/x-team-community/ben-60-min</a> to schedule a talk with Ben <span role="img" aria-label="love">😎</span>.
+          </p>
+          <img src="./ben.png" style={{ width: "30%" }} alt="This is Ben btw!" />
+        </div>
       ) : ( match.params.id === "raffle" ? (
         <Result />
       ) : ( <Redirect to="/join"/> ))

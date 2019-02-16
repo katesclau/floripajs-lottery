@@ -27,7 +27,17 @@ const Result = () => (
       const winner = candidates[Math.floor(Math.random() * candidates.length)];
       console.log(winner);
 
-      return <div>Congratulations {winner.fullname}! <span role="img" aria-label="huray!">🙌</span></div>;
+      if (winner){
+        return (
+          <div>
+            <img src="./x-white.png" alt="X-Team logo white" style={{ width: "33%" }}/>
+              <h1>
+                Congratulations {winner.fullname}! <span role="img" aria-label="huray!">🙌</span>
+              </h1>
+          </div>
+        );
+      }
+      return <img src="./waiting.gif" style={{}} />    
     }}
   </Query>
 );

@@ -22,6 +22,7 @@ const CandidateForm = () => {
     <Mutation mutation={CREATE}>
       {(createCandidate, { loading, error, data }) => (
         <div className="container">
+          <img src="./x-white.png" alt="X-Team logo white" style={{ width: "33%" }}/>
           <p>
             This is your chance to win an <a href="https://alura.com.br" style={{ color: "white" }}>alura.com.br</a> membership <span role="img" aria-label="love">😍</span>.
           </p>
