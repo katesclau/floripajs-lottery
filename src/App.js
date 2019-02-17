@@ -11,11 +11,9 @@ import CandidateForm from './CandidateForm'
 import Result from './Result'
 
 require('dotenv').config();
-console.log(process.env);
 
 const auth = {};
 auth[process.env.REACT_APP_API_SECRET_HEADER] = process.env.REACT_APP_API_SECRET
-console.log(auth);
 
 const link = createHttpLink({
   uri: process.env.REACT_APP_API_ENDPOINT,
@@ -35,21 +33,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-client
-  .query({
-    query: gql`
-      query getCandidates{
-        candidate{
-          ID
-          email
-          github
-          fullname
-        }
-      }
-    `
-  })
-  .then(result => console.log(result));
-  
 class App extends Component {
   render() {
     return (

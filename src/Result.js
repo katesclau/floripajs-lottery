@@ -20,13 +20,8 @@ const Result = () => (
       if (error) return <p>Error :(</p>;
 
       
-      console.log(data);
       const candidates = data.candidate;
-      console.log(candidates);
-
       const winner = candidates[Math.floor(Math.random() * candidates.length)];
-      console.log(winner);
-
       if (winner){
         return (
           <div>

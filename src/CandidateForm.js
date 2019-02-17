@@ -29,10 +29,10 @@ const CandidateForm = () => {
           <form className="dark-matter"
             onSubmit={e => {
               e.preventDefault();
+              // TODO: form validation
               me.email = me.email.value;
               me.fullname = me.fullname.value;
               me.github = me.github.value;
-              console.log(me);
 
               createCandidate({ variables: { me }}).catch(e => {
                 window.location.href = "/join";  
